@@ -17,17 +17,86 @@
 		</ul>
 	</section>	
 	<section id="header">
-		<ul>
-			<li clsss='li'>1</li>
-			<li class='li'>2</li>
-		</ul>
-		<h1>enjoy jerusalem today</h1>
-		<h2>Book a toor now</h2>
+		<div id="headings">
+			<h1>enjoy jerusalem today</h1>
+			<h2>Book a toor now</h2>
+		</div>
+		<div id="slider">
+			<ul>
+				<li id="1"></li>
+				<li id="2"></li>
+                <li id="3"></li>
+                <li id="4"></li>
+                <li id="5"></li>
+			</ul>
+		</div>
 	</section>
-	<section id="someinfo"></section>
-	<section id="tours"></section>
-	<section id="booking"></section>
-	enjoy jerusalem today
+    <hr />
+	<section id="someinfo">
+        <div class="column-third">
+            <h2>IT'S ALL ABOUT THE GUIDE</h2>
+            <hr>
+            <p>
+                Join the site so you can touch the history, taste our food feel the nature and enjoy the attractions that Israel offer ,every visitor is different, each of my tours is tailored to meet your wishes and needs. In addition to visites of traditional sites, I offer an opportunity to learn about the different cultures, colors, and aromas that create the excitement of Israel.
+            </p>
+        </div>
+        <div class="column-third">
+            <h2>Meeting your needs</h2>
+            <hr>
+            <p>
+                Our local guides are waiting to show you their countryside and places of interest. All sightseeing excursions are accompanied with your own private Language.This means that you can ask as many or as few questions as you like and take sightseeing trips at your own pace, with the emphasis on your own interests.
+            </p>
+        </div>
+        <div class="column-third">
+            <h2>Every tour is private</h2>
+            <hr>
+            <p>
+                Tours Tailored for families with children
+                Benefit from a local’s knowledge,
+                Private Driver available on request
+                assistance provided before and after your Private Tour.
+                In order to take information about prices send us an email.
+            </p>
+        </div>
+        <div class="clear"></div>
+    </section>
+    <hr>
+	<section id="booking">
+        <div class="half-column">
+            <form method="POST" action="sendemail.php">
+                <input type="text" id="name" placeholder="Your name">
+                <input type="text" id="hotel" placeholder="Hotel or Adress where you stay">
+                <input type="text" id="email" placeholder="Email">
+                <input type="text" id="howlong" placeholder="How long will you stay">
+                <input type="text" id="phone" placeholder="Your phone">
+                <input type="text" id="numberofpersons" placeholder="Number of Persons">
+                <input type="date" id="date" placeholder="Date of visit">
+                <input type="text" id="time" placeholder="Time of your departure">
+                <textarea placeholder="Your message."></textarea>
+                <input type="submit">
+            </form>
+        </div>
+        <div class="half-column" id="right-column">
+            <div id="details-contacts">
+                <h3>CONTACTS US</h3>
+
+                <p id="phone-and-email">
+                    <div id="adminPhone">Phone : + 39 338 70 90 880</div>
+                    <div id="adminEmail">Email : info@milanprivatetours.com</div>
+                </p>
+                <div id="list">
+                    <ul>
+                        <li>Designed to meet your needs</li>
+                        <li>Every Tour is Private</li>
+                        <li>Tours Tailored for families with children</li>
+                        <li>Private Driver available on request</li>
+                        <li>Assistance provided before and after your Private Tour</li>
+                        <li>Best guides in Jerusalem</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 	<script src="jquery-1.11.3.js"></script>
 	<script src="jquery.backstretch.min.js"></script>
 	<script src="main.js"></script>
