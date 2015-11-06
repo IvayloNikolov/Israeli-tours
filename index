@@ -1,0 +1,11 @@
+<html>
+<head>
+	<title>Israeli Tours</title>
+</head>
+<body>
+	<section id="header"></section>
+	<section id="someinfo"></section>
+	<section id="tours"></section>
+	<section id="booking"></section>
+</body>
+</html>
