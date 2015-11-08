@@ -1,5 +1,5 @@
 var bg_url = $('#header').css('background-image');
-bg_url= /url\(http:\/\/ivaylonikolov.net\/Israeli-tours\/images([0-9]+).jpg\)/g.exec(bg_url);
+bg_url= /url\(http:\/\/ivaylonikolov.net\/safaatours.global\/images([0-9]+).jpg\)/g.exec(bg_url);
 bg_url = bg_url[1];
 var counter = 0;
 $('#header').backstretch("images1.jpg");
@@ -35,7 +35,7 @@ $('#slider li').click(function()
     }
     if(imageNumber==3)
     {
-        $("#header #headings h1").html('Enjoy Haifa today')
+        $("#header #headings h1").html('Enjoy Caesarea today')
     }
     if(imageNumber==4)
     {
@@ -43,7 +43,7 @@ $('#slider li').click(function()
     }
     if(imageNumber==5)
     {
-        $("#header #headings h1").html('Enjoy Caesarea today');
+        $("#header #headings h1").html('Enjoy Haifa today');
     }
     if(imageNumber==2 || imageNumber==3 || imageNumber==5)
     {

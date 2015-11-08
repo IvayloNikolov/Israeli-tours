@@ -57,7 +57,7 @@ table {
 #header
 {
 	height:600px;
-	background-image:url("images1.jpg");
+	background-image:url("images/images1.jpg");
 	text-align:center;
 }
 #menu a
@@ -104,7 +104,7 @@ h2
 }
 #header li
 {
-	background-image:url('circle-empty.png');
+	background-image:url('images/circle-empty.png');
 	background-repeat:no-repeat;
 	width: 16px;
 	height:16px;
@@ -134,7 +134,7 @@ hr
     background-color: #646464;
     border:0px solid #000;
     margin-top:40px;
-    margin-bottom:40px;
+    margin-bottom:30px;
 }
 @media (max-width: 1000px)
 {
@@ -224,7 +224,8 @@ hr
 }
 #about-us h2
 {
-    color:#27566f;
+    color:#27566
+    f;
     padding-top:10px;
     padding-bottom:10px;
     font-size:20px;
@@ -255,6 +256,7 @@ hr
 
 #someinfo
 {
+    padding-top:100px;
     width:100%;
     margin:0px auto;
 
@@ -262,6 +264,27 @@ hr
 .clear
 {
     clear:both;
+}
+#your-local-guide h2
+{
+    color:#22B6E7;
+    padding-top:10px;
+    font-size:26px;
+    margin-bottom:30px;
+}
+#your-local-guide
+{
+    width:100%;
+    height:150px;
+    background-color:#222;
+    text-align:Center;
+}
+#your-local-guide p
+{
+    color:#fff;
+    width:40%;
+    margin: 0px auto;
+    font-size:14px;
 }
 input[type=text]
 {
@@ -297,8 +320,21 @@ textarea
 #booking
 {
     width:80%;
-
     margin:0px auto;
+}
+#booking h2
+{
+    color:#27566f;
+    font-size:32px;
+    margin-bottom:15px;
+    text-align: center;
+}
+#booking p
+{
+    width:60%;
+    margin:0px auto;
+    padding-bottom: 30px;
+
 }
 #contacts
 {
@@ -423,11 +459,20 @@ footer h3
 {
     margin-top:10px;
 }
+#info
+{
+    padding-top:10px;
+    font-size:16px;
+}
+#copyright
+{
+    margin-top:90px;
+}
 #jerusalem-background
 {
     width: 100%;
     height:200px;
-    background-image:url('jerusalem-skyline.png');
+    background-image:url('images/jerusalem-skyline.png');
     background-repeat:no-repeat;
     background-position:850px 0px;
 }

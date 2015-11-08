@@ -20,11 +20,17 @@ if(isset($_POST["submit"]))
 	$mail->From = "me@ivaylonikolov.net";
 	$mail->FromName = $_POST['name'];
 	$mail->Subject = $_POST['subject'];
-	// $_POST['name'] $_POST['hotel'] $_POST['email] $_POST['howlong']
-	// $_POST['phone'] $_POST['numberofpersons'] $_POST['date'] $_POST['time']
-	// $_POST['message']
-	$mail->Body    = "Hello, My name is $_POST['name']. I am staying at $_POST['hotel']. I will stay for $_POST['howlong'] days. 
-		My phone is $_POST['phone']. I am with $_POST['numberofpersons'] people. My departure is at $_POST['date'], $_POST['time'].$_POST['message']";
+	$name = $_POST['name'];
+	$hotel = $_POST['hotel'];
+	$howlong = $_POST['howlong'];
+	$phone = $_POST['phone'];
+	$numberofpersons = $_POST['numberofpersons'];
+	$date = $_POST['date'];
+	$time = $_post['time'];
+	$message = $_POST['message'];
+	
+	$mail->Body    = 'Hello, My name is $name. I am staying at $hotel. I will stay for $howlong days. 
+		My phone is $phone. I am with $numberofpersons people. My departure is at $date, $time . $message';
 	if(!$mail->send()) {
 		
 		echo 'Message could not be sent. 2';
@@ -36,19 +42,19 @@ if(isset($_POST["submit"]))
 ?>
 <html>
 <head>
-	<title>Israeli Tours</title>
+	<title>Safaa tours</title>
 	<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 	<link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 	<section id="menu">
 		<ul>
-			<li><a href="#someinfo" onclick="hide()">About us</a></li>
-			<li><a href="#" onclick="hide()">Tours</a></li>
+			<li><a href="index.php">Home</a></li>
+			<li><a href="aboutus.php">About us</a></li>
 		</ul>
-		<img src="logo.png" width="130px">
+		<img src="images/logo.png" width="130px">
 		<ul>
-			<li><a href="#" onclick="hide()">Gallery</a></li>
+			<li><a href="gallery.html">Gallery</a></li>
 			<li><a href="#booking" onclick="hide()">Contact us</a></li>
 		</ul>
 	</section>	
@@ -68,42 +74,17 @@ if(isset($_POST["submit"]))
 		</div>
 	</section>
     <hr />
-	<section id="someinfo">
-        <div class="column-quarter">
-            <h2>Every tour is private</h2>
-            <hr>
-            <p>
-                Also you can book a tour with no guide,  a professinal licensed Taxi driver to take you wherever you want in Israel!
-                In order to take information about prices send us an email.
-            </p>
-
-        </div>
-        <div class="column-quarter">
-            <h2>Meeting your needs</h2>
-            <hr>
-            <p>
-                Our local guides are waiting to show you their countryside and places of interest. All sightseeing excursions are accompanied with your own private Language.This means that you can ask as many or as few questions as you like and take sightseeing trips at your own pace, with the emphasis on your own interests.
-            </p>
-        </div>
-        <div class="column-quarter">
-            <h2>IT'S ALL ABOUT THE GUIDE</h2>
-            <hr>
-            <p>
-                Join the site so you can touch the history, taste our food feel the nature and enjoy the attractions that Israel offer ,every visitor is different, each of my tours is tailored to meet your wishes and needs. In addition to visites of traditional sites, I offer an opportunity to learn about the different cultures, colors, and aromas that create the excitement of Israel.
-            </p>
-        </div>
-        <div class="column-quarter">
-            <h2>About Us</h2>
-            <p>
-                Safaa Tours is a new company with a new idea set out for the comfort of tourists arriving to Israel. Combining transportation, guides and other services under package prices and sales, we take care of your needs from private transportations to private and group guides all over Israel any day of the week. We also provide VIP services for returning guests and for guests who require a luxury service and help.
-            </p>
-        </div>
-        <div class="clear"></div>
+    <section id="your-local-guide">
+        <h2>YOUR LOCAL GUIDE IN ISRAEL</h2>
+        <p>Enjoy the most famous highlights and the most hidden treasures of the city, based on personalized programs. 
+So much more than what people say about the city is behind the corner: Milan will surprise you with its hidden culture, charm and beauty.</p>
     </section>
     <hr>
 	<section id="booking">
+        <h2>BOOK NOW</h2>
+        <p>For prices and more information please complete the following form or send an email</p>
         <div class="half-column">
-            <form method="POST" action="sendemail.php">
+            <form method="POST" action="index.php">
                 <input type="text" id="name" placeholder="Your name">
                 <input type="text" id="hotel" placeholder="Hotel or Adress where you stay">
                 <input type="text" id="email" placeholder="Email">
@@ -119,7 +100,6 @@ if(isset($_POST["submit"]))
         <div class="half-column" id="right-column">
             <div id="details-contacts">
                 <h3>CONTACT US</h3>
-
                 <p id="phone-and-email">
                     <div id="adminPhone">Phone : +972546009089</div>
                     <div id="adminEmail">Email : <i>info@safaatours.global</i></div>
@@ -143,7 +123,7 @@ if(isset($_POST["submit"]))
             <div class="column-third-footer">
                 <h3>CONTACT US</h3>
                 <div id="under-contact-us">
-                    <p>Email: Email : <i>info@safaatours.global</p>
+                    <p>Email: <i>info@safaatours.global</p>
                     <br />
                     <p>Phone : +972546009089</p>
                     <br />
@@ -154,6 +134,7 @@ if(isset($_POST["submit"]))
                     <img src="http://flags.fmcdn.net/data/flags/normal/fr.png" class="image-flag">
                     <img src="http://flags.fmcdn.net/data/flags/normal/es.png" class="image-flag">
                     <img src="http://flags.fmcdn.net/data/flags/normal/pt.png" class="image-flag">
+                    <img src="http://flags.fmcdn.net/data/flags/normal/de.png" class="image-flag">
                 </div>
             </div>
             <div class="column-third-footer">
@@ -161,7 +142,7 @@ if(isset($_POST["submit"]))
                 <div id="logos">
                     <div class="black-and-white-logo">
                         <div class="row">
-                            <a href="https://www.facebook.com/safaatours/"><img src="fb_icon.png" class="icon"></a>
+                            <a href="https://www.facebook.com/safaatours/"><img src="images/fb_icon.png" class="icon"></a>
                             <img src="http://www.victoria.ac.nz/assets/images/twitter_logo.png" class="icon">
                         </div>
                         <div class="row">
@@ -172,7 +153,8 @@ if(isset($_POST["submit"]))
                 </div>
             </div>
             <div class="column-third-footer">
-                <P>SAFAA Private Tours © 2015</P>
+                <div id="info">Our team of professional, friendly, knowledgeable tour guides and taxi drivers will lead you through the most beautiful highlights and secrets spots of the city.</div>
+                <p id="copyright">SAFAA Private Tours © 2015</p>
             </div>
             <div class="clear"></div>
         </div>
@@ -180,6 +162,6 @@ if(isset($_POST["submit"]))
 	<script src="jquery-1.11.3.js"></script>
 	<script src="jquery.backstretch.min.js"></script>
     <script src="jquery.BlackAndWhite.js"></script>
-    <script src="main.js"></script>
+    <script src="lib/main.js"></script>
 </body>
 </html>
