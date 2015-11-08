@@ -45,16 +45,17 @@ table {
 #menu
 {
 	width:100%;
+    height:80px;
 	background:linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,0.97) 49%,rgba(255,255,255,0.8) 100%);
 	font-family: 'Open Sans';
 	position:fixed;
 	text-align:center;
 	top:0px;
 	left:0px;
+    z-index:1000;
 }
 #header
 {
-    z-index:1000;
 	height:600px;
 	background-image:url("images1.jpg");
 	margin-top:60px;
@@ -216,8 +217,9 @@ textarea
 }
 #booking
 {
-    background-color:#242424;
+    background: #000;
     width:80%;
+
     margin:0px auto;
 }
 .half-column
@@ -259,8 +261,57 @@ h3
 {
     margin-top:30px;
 }
-#list li
-{
+ul li {
+    /* Bullet color */
     margin-top:3px;
-    list-style: circle;
+    color: #27566f;
+    list-style-type: disc;
+}
+.listed-item
+{
+    color:#000;
+}
+footer
+{
+    width:100%;
+    height: 250px;
+    background-color:#000;
+}
+.column-third-footer
+{
+    float:left;
+    color:#fff;
+    width:31%;
+    margin-left:2%;
+}
+
+#information-footer
+{
+    padding-top:30px;
+    width:80%;
+    margin:0px auto;
+}
+
+footer h3
+{
+    color:#2ecbe8;
+    font-size:22px;
+}
+#information-footer p
+{
+    color: #fff;
+    font-size:16px;
+}
+#under-contact-us
+{
+    margin-top:20px;
+}
+.image-flag
+{
+    width: auto;
+    height:20px;
+}
+#flags
+{
+    margin-top:15px;
 }
