@@ -47,11 +47,11 @@ $('#slider li').click(function()
     }
     if(imageNumber==2 || imageNumber==3 || imageNumber==5)
     {
-        $('#headings').animate({paddingTop:'60px'}, 1000);
+        $('#headings').animate({paddingTop:'100px'}, 1000);
     }
     else
     {
-        $('#headings').animate({paddingTop:'160px'}, 1000);
+        $('#headings').animate({paddingTop:'180px'}, 1000);
     }
 });
 function hide()

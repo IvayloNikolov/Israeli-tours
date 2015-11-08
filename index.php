@@ -1,3 +1,39 @@
+<?php
+
+require('phpmailer/class.phpmailer.php');
+
+if(isset($_POST["submit"]))
+{
+	$mail = new PHPMailer();
+
+	$mail->isSMTP();                                      // Set mailer to use SMTP
+	$mail->Host = 'ivaylonikolov.net';  // Specify main and backup SMTP servers
+	$mail->SMTPAuth = true;                               // Enable SMTP authentication
+	$mail->Username = 'me@ivaylonikolov.net';                 // SMTP username
+	$mail->Password = 'xaxaxa123';                           // SMTP password
+	$mail->SMTPSecure = 'Tour';                            // Enable TLS encryption, `ssl` also accepted
+	$mail->Port = 25;                                    // TCP port to connect to
+
+	$mail->addAddress('ivnikolov721@gmail.com', 'Ivaylo Nikolov');     // Add a recipient
+
+	$mail->isHTML(true);                                  // Set email format to HTML
+	$mail->From = "me@ivaylonikolov.net";
+	$mail->FromName = $_POST['name'];
+	$mail->Subject = $_POST['subject'];
+	// $_POST['name'] $_POST['hotel'] $_POST['email] $_POST['howlong']
+	// $_POST['phone'] $_POST['numberofpersons'] $_POST['date'] $_POST['time']
+	// $_POST['message']
+	$mail->Body    = "Hello, My name is $_POST['name']. I am staying at $_POST['hotel']. I will stay for $_POST['howlong'] days. 
+		My phone is $_POST['phone']. I am with $_POST['numberofpersons'] people. My departure is at $_POST['date'], $_POST['time'].$_POST['message']";
+	if(!$mail->send()) {
+		
+		echo 'Message could not be sent. 2';
+		echo 'Mailer Error: ' . $mail->ErrorInfo;
+	} else {
+		echo 'Message has been sent';
+	}
+}
+?>
 <html>
 <head>
 	<title>Israeli Tours</title>
@@ -76,7 +112,7 @@
                 <input type="text" id="numberofpersons" placeholder="Number of Persons">
                 <input type="date" id="date" placeholder="Date of visit">
                 <input type="text" id="time" placeholder="Time of your departure">
-                <textarea placeholder="Your message."></textarea>
+                <textarea id="message" placeholder="Your message."></textarea>
                 <input type="submit">
             </form>
         </div>
