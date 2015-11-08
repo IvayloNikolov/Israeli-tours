@@ -7,19 +7,19 @@
 <body>
 	<section id="menu">
 		<ul>
-			<li><a href="#">About us</a></li>
-			<li><a href="#">Tours</a></li>
+			<li><a href="#someinfo" onclick="hide()">About us</a></li>
+			<li><a href="#" onclick="hide()">Tours</a></li>
 		</ul>
 		<img src="logo.png" width="130px">
 		<ul>
-			<li><a href="#">Gallery</a></li>
-			<li><a href="#">Contact us</a></li>
+			<li><a href="#" onclick="hide()">Gallery</a></li>
+			<li><a href="#booking" onclick="hide()">Contact us</a></li>
 		</ul>
 	</section>	
 	<section id="header">
 		<div id="headings">
-			<h1>enjoy jerusalem today</h1>
-			<h2>Enjoy Bethlehem today</h2>
+			<h1>ENJOY ISRAEL TODAY</h1>
+			<h2>FEEL SACRED NOW</h2>
 		</div>
 		<div id="slider">
 			<ul>
@@ -33,7 +33,7 @@
 	</section>
     <hr />
 	<section id="someinfo">
-        <div class="column-third">
+        <div class="column-quarter">
             <h2>Every tour is private</h2>
             <hr>
             <p>
@@ -42,18 +42,24 @@
             </p>
 
         </div>
-        <div class="column-third">
+        <div class="column-quarter">
             <h2>Meeting your needs</h2>
             <hr>
             <p>
                 Our local guides are waiting to show you their countryside and places of interest. All sightseeing excursions are accompanied with your own private Language.This means that you can ask as many or as few questions as you like and take sightseeing trips at your own pace, with the emphasis on your own interests.
             </p>
         </div>
-        <div class="column-third">
+        <div class="column-quarter">
             <h2>IT'S ALL ABOUT THE GUIDE</h2>
             <hr>
             <p>
                 Join the site so you can touch the history, taste our food feel the nature and enjoy the attractions that Israel offer ,every visitor is different, each of my tours is tailored to meet your wishes and needs. In addition to visites of traditional sites, I offer an opportunity to learn about the different cultures, colors, and aromas that create the excitement of Israel.
+            </p>
+        </div>
+        <div class="column-quarter">
+            <h2>About Us</h2>
+            <p>
+                Safaa Tours is a new company with a new idea set out for the comfort of tourists arriving to Israel. Combining transportation, guides and other services under package prices and sales, we take care of your needs from private transportations to private and group guides all over Israel any day of the week. We also provide VIP services for returning guests and for guests who require a luxury service and help.
             </p>
         </div>
         <div class="clear"></div>
@@ -80,7 +86,7 @@
 
                 <p id="phone-and-email">
                     <div id="adminPhone">Phone : +972546009089</div>
-                    <div id="adminEmail">Email : info@safaatours.global</div>
+                    <div id="adminEmail">Email : <i>info@safaatours.global</i></div>
                 </p>
                 <div id="list">
                     <ul>
@@ -95,14 +101,15 @@
         </div>
     </section>
     <div class="clear"></div>
+    <div id="jerusalem-background"></div>
     <footer>
         <div id="information-footer">
             <div class="column-third-footer">
                 <h3>CONTACT US</h3>
                 <div id="under-contact-us">
-                    <p>Email: info@milanprivatetours.com</p>
+                    <p>Email: Email : <i>info@safaatours.global</p>
                     <br />
-                    <p>Phone: +39 338 7090880</p>
+                    <p>Phone : +972546009089</p>
                     <br />
                 </div>
                 <p>Tours available in:</p>
@@ -115,15 +122,28 @@
             </div>
             <div class="column-third-footer">
                 <h3>Follow us</h3>
-                <
+                <div id="logos">
+                    <div class="black-and-white-logo">
+                        <div class="row">
+                            <a href="https://www.facebook.com/safaatours/"><img src="fb_icon.png" class="icon"></a>
+                            <img src="http://www.victoria.ac.nz/assets/images/twitter_logo.png" class="icon">
+                        </div>
+                        <div class="row">
+                            <img src="http://www.deonvsearth.com/wp-content/uploads/2015/02/instagram-logo-1024x1024.png" class="icon">
+                            <img src="http://wersm.com/wp-content/uploads/2014/06/google-plus-logo.png" class="icon">
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="column-third-footer">
-
+                <P>SAFAA Private Tours © 2015</P>
             </div>
+            <div class="clear"></div>
         </div>
     </footer>
 	<script src="jquery-1.11.3.js"></script>
 	<script src="jquery.backstretch.min.js"></script>
-	<script src="main.js"></script>
+    <script src="jquery.BlackAndWhite.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
